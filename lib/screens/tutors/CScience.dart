@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -39,10 +41,10 @@ class _CSienceState extends State<CSience> {
       // backgroundColor: Colors.blue[100],
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.blue[400],
+        backgroundColor: Color(0xffAACFD0),
         title: Text(
           'Computer Science',
-          style: TextStyle(color: Colors.yellow[300]),
+          style: TextStyle(color: Colors.white),
         ),
       ),
       body: Center(
@@ -50,7 +52,8 @@ class _CSienceState extends State<CSience> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Tap the circle to enter a profil picture',
+              SizedBox(height: 20.0),
+              Text('Tap the circle to enter a profile picture',
                   style: TextStyle(
                     fontSize: 20.0,
                   )),
@@ -60,6 +63,7 @@ class _CSienceState extends State<CSience> {
                   onTap: () => getImage(),
                   child: CircleAvatar(
                     radius: 75,
+                    backgroundColor: Color(0xff5DA0A2),
                     backgroundImage:
                         image != null ? FileImage(image) : NetworkImage("null"),
                   ),
@@ -196,9 +200,9 @@ class _CSienceState extends State<CSience> {
                       width: 150,
                       height: 50,
                       child: RaisedButton(
-                          color: Colors.blue[300],
+                          color: Color(0xff5DA0A2),
                           child: Text('Submit post',
-                              style: TextStyle(color: Colors.black)),
+                              style: TextStyle(color: Colors.white)),
                           onPressed: () async {
                             if (email.isEmpty ||
                                 fullname == '' ||
@@ -262,9 +266,9 @@ class _CSienceState extends State<CSience> {
                           width: 150,
                           height: 50,
                           child: RaisedButton(
-                            color: Colors.blue[300],
+                            color: Color(0xff5DA0A2),
                             child: Text('See my post',
-                                style: TextStyle(color: Colors.black)),
+                                style: TextStyle(color: Colors.white)),
                             onPressed: () {
                               Navigator.push(
                                   context,

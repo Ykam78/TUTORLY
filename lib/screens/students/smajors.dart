@@ -10,24 +10,23 @@ class _SMajorsState extends State<SMajors> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xffAACFD0),
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.blue[400],
+          backgroundColor: Color(0xffAACFD0),
           title: Text(
             'List of Majors',
-            style: TextStyle(color: Colors.yellow[300]),
+            style: TextStyle(color: Colors.white),
           ),
         ),
         body: ListView(children: <Widget>[
           ListTile(
-              onTap: (){
-
-                   
-                          Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => new SCMPE()));},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (BuildContext context) => new SCMPE()));
+            },
             leading: CircleAvatar(
               radius: 20,
               backgroundColor: Colors.transparent,
