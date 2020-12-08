@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:tutorly/services/auth.dart';
 import 'package:tutorly/models/user.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -16,8 +15,7 @@ class MyApp extends StatelessWidget {
     return StreamProvider<User>.value(
       value: AuthService().user,
       child: MaterialApp(
-        home:Wrapper(),
-
+        home: Wrapper(),
       ),
     );
   }
