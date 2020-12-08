@@ -19,223 +19,190 @@ class _Home_TutorState extends State<Home_Tutor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.blue[400],
-          title: Text('Home'),
-          elevation: 0.0,
-          actions: <Widget>[
-            FlatButton.icon(
-              icon: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-              label: Text('Sign out'),
-              textColor: Colors.white,
-              onPressed: () async {
-                await _auth.signOut();
-              },
-            )
-          ]),
-          
-      drawer: new Drawer(
-        child: ListView(
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: <Color>[
-                  Colors.blue[600],
-                  Colors.lightBlueAccent,
-                ]),
-              ),
-              child: Text(
-                '                Main Menu',
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
-            new ListTile(
-              leading: new IconButton(
-                  icon: Icon(Icons.person, color: Colors.black),
-                  color: Colors.black),
-              title: Text(
-                'My Profile',
-                style: TextStyle(fontSize: 15),
-              ),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => new ProfilePage()));
-              },
-            ),
-            new Divider(
-              color: Colors.black,
-              height: 5.0,
-            ),
-            new ListTile(
-              leading: new IconButton(
-                  icon: Icon(Icons.payment, color: Colors.black),
-                  color: Colors.black),
-              title: Text(
-                'Add Payment Method',
-                style: TextStyle(fontSize: 15),
-              ),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => new Payments()));
-              },
-            ),
-            new Divider(
-              color: Colors.black,
-              height: 5.0,
-            ),
-            new ListTile(
-              leading: new IconButton(
-                  icon: Icon(Icons.question_answer, color: Colors.black),
-                  color: Colors.black),
-              title: Text(
-                'FAQs',
-                style: TextStyle(fontSize: 15),
-              ),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => new FAQ()));
-                
-              },
-            ),
-            new Divider(
-              color: Colors.black,
-              height: 5.0,
-            ),
-            new ListTile(
-              leading: new IconButton(
-                  icon: Icon(Icons.email, color: Colors.black),
-                  color: Colors.black),
-              title: Text(
-                'Contact Us',
-                style: TextStyle(fontSize: 15),
-              ),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => new Contact()));
-               
-              },
-            ),
-
-            ],
-        ),
-      ),
-
-            body:Center(child: 
-            
-            
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              
-              
-              
-              children: <Widget>[
-
-                
-                Text('What would you like to do today ?',style: TextStyle(
-                  
-                  color:Colors.white,
-                  fontSize: 22.0,
-
-                  ),),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-
-                  Column(
-                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-
-                      RawMaterialButton(onPressed: (){
-
-                          Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => new TMajors()));
-
-                      },
-                    child:Icon(Icons.school,size: 35,),
-                    fillColor: Colors.yellow,
-                    padding: EdgeInsets.all(15.0),
-                    shape: CircleBorder(),
-
-
-                
+        backgroundColor: Color(0xffAACFD0),
+        appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color(0xffAACFD0),
+            title: Text('Home'),
+            elevation: 0.0,
+            actions: <Widget>[
+              FlatButton.icon(
+                icon: Icon(
+                  Icons.person,
+                  color: Colors.white,
                 ),
-
-
-                    Text('Become a Tutor',style: TextStyle(
-                      
-                      fontSize: 20.0,
-                      color:Colors.white
-                      ),),
-
-                    
-
-                  ],
-
-                    
+                label: Text('Sign out'),
+                textColor: Colors.white,
+                onPressed: () async {
+                  await _auth.signOut();
+                },
+              )
+            ]),
+        drawer: new Drawer(
+          child: ListView(
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: <Color>[
+                    Color(0xff5DA0A2),
+                    Color(0xff5DA0A2),
+                  ]),
+                ),
+                child: Text(
+                  '                Main Menu',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
                   ),
-
-                  Column(children: <Widget>[
-
-                    RawMaterialButton(onPressed: (){
-                       Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => new SMajors()));
-                    },
-                child:Icon(Icons.search,size: 35,),
-               
-                fillColor: Colors.green,
-                padding: EdgeInsets.all(15.0),
-                shape: CircleBorder(),
-
-
-                
                 ),
-
-                    Text('Find a Tutor',style: TextStyle(
-                      fontSize:20.0,
-                      color:Colors.white ),),
-                     
-
-
-                  ],)
-                ],)
-
-               
-                
-                
-                
-
-                
-
-                
-                
-              ],
-
-              
-
-
-            ),)
-    );
+              ),
+              new ListTile(
+                leading: new IconButton(
+                    icon: Icon(Icons.person, color: Colors.black),
+                    color: Colors.black),
+                title: Text(
+                  'My Profile',
+                  style: TextStyle(fontSize: 15),
+                ),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              new ProfilePage()));
+                },
+              ),
+              new Divider(
+                color: Colors.black,
+                height: 5.0,
+              ),
+              new ListTile(
+                leading: new IconButton(
+                    icon: Icon(Icons.payment, color: Colors.black),
+                    color: Colors.black),
+                title: Text(
+                  'Add Payment Method',
+                  style: TextStyle(fontSize: 15),
+                ),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (BuildContext context) => new Payments()));
+                },
+              ),
+              new Divider(
+                color: Colors.black,
+                height: 5.0,
+              ),
+              new ListTile(
+                leading: new IconButton(
+                    icon: Icon(Icons.question_answer, color: Colors.black),
+                    color: Colors.black),
+                title: Text(
+                  'FAQs',
+                  style: TextStyle(fontSize: 15),
+                ),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (BuildContext context) => new FAQ()));
+                },
+              ),
+              new Divider(
+                color: Colors.black,
+                height: 5.0,
+              ),
+              new ListTile(
+                leading: new IconButton(
+                    icon: Icon(Icons.email, color: Colors.black),
+                    color: Colors.black),
+                title: Text(
+                  'Contact Us',
+                  style: TextStyle(fontSize: 15),
+                ),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (BuildContext context) => new Contact()));
+                },
+              ),
+            ],
+          ),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Text(
+                'What would you like to do today ?',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22.0,
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      RawMaterialButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      new TMajors()));
+                        },
+                        child: Icon(
+                          Icons.school,
+                          size: 35,
+                        ),
+                        fillColor: Colors.yellow,
+                        padding: EdgeInsets.all(15.0),
+                        shape: CircleBorder(),
+                      ),
+                      Text(
+                        'Become a Tutor',
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      RawMaterialButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      new SMajors()));
+                        },
+                        child: Icon(
+                          Icons.search,
+                          size: 35,
+                        ),
+                        fillColor: Colors.green,
+                        padding: EdgeInsets.all(15.0),
+                        shape: CircleBorder(),
+                      ),
+                      Text(
+                        'Find a Tutor',
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ],
+                  )
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }
