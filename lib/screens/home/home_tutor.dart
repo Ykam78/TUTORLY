@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tutorly/main.dart';
+import 'package:tutorly/screens/Contact%20us/ContactUs.dart';
+import 'package:tutorly/screens/FAQs/FAQs.dart';
 import 'package:tutorly/screens/payments/payment.dart';
 import 'package:tutorly/services/auth.dart';
 import 'package:tutorly/screens/home/profile.dart';
@@ -101,6 +103,11 @@ class _Home_TutorState extends State<Home_Tutor> {
                 style: TextStyle(fontSize: 15),
               ),
               onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (BuildContext context) => new FAQ()));
                 
               },
             ),
@@ -117,6 +124,11 @@ class _Home_TutorState extends State<Home_Tutor> {
                 style: TextStyle(fontSize: 15),
               ),
               onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (BuildContext context) => new Contact()));
                
               },
             ),
